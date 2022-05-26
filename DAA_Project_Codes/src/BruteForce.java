@@ -1,3 +1,5 @@
+//Source: https://github.com/jsedano/examples/blob/main/java-snippets/NQueensBruteForce.java
+
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -54,17 +56,21 @@ class NQueensBruteForce{
 
     public static void main(String[] args){
         final long startTime = System.currentTimeMillis();
-        int n = 14;
+        
+        int n = 4;
         
         var permutations = new LinkedList<int[]>(); // permutations will be saved here
         
         generatePermutations(permutations, new LinkedHashSet<Integer>(), n);
         
-        // for(int []arr : permutations) {
-        //     if(isSolution(arr)) {
-        //         System.out.println(toString(arr)); // print valid solutions.
-        //     }
-        // }
+    
+        for(int []arr : permutations) {
+            if(isSolution(arr)) {
+                /* Commented out the print statements to get more accurate time results */
+                // System.out.println(toString(arr)); // print valid solutions.
+            }
+        }
+
         final long endTime = System.currentTimeMillis();
         System.out.println("Total Execution Time: " + (endTime - startTime));
     }

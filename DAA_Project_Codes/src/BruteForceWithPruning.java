@@ -58,7 +58,7 @@ class Queens2 {
 
     public static void main(String[] args) {
         final long startTime = System.currentTimeMillis();
-        int n = 16;
+        int n = 18;
         int[] a = new int[n]; // a[i] = row of queen in ith column
         boolean[] diag1 = new boolean[2 * n]; // is ith top diagonal occupied?
         boolean[] diag2 = new boolean[2 * n]; // is ith bottom diagonal occupied?
