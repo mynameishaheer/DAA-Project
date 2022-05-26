@@ -11,7 +11,7 @@ class Queens2 {
                 if (a[i] == j)
                     System.out.print("Q ");
                 else
-                System.out.print("* ");
+                    System.out.print("* ");
             }
             System.out.println();
         }
@@ -34,10 +34,7 @@ class Queens2 {
         // found one, so print out and stop
         if (k == 0) {
             // printQueens(a);
-            // count++;
-            // System.out.println(count);
-            // System.out.println();
-            // // System.exit(0);
+            // System.exit(0);
         }
 
         for (int i = 0; i < k; i++) {
@@ -58,7 +55,7 @@ class Queens2 {
 
     public static void main(String[] args) {
         final long startTime = System.currentTimeMillis();
-        int n = 18;
+        int n = 16;
         int[] a = new int[n]; // a[i] = row of queen in ith column
         boolean[] diag1 = new boolean[2 * n]; // is ith top diagonal occupied?
         boolean[] diag2 = new boolean[2 * n]; // is ith bottom diagonal occupied?

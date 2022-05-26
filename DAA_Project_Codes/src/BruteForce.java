@@ -57,7 +57,7 @@ class NQueensBruteForce{
     public static void main(String[] args){
         final long startTime = System.currentTimeMillis();
         
-        int n = 4;
+        int n = 12;
         
         var permutations = new LinkedList<int[]>(); // permutations will be saved here
         
