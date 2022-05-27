@@ -1,18 +1,10 @@
-## Getting Started
+### Codes used in experiment for testing
+ - Brute Force Algorithm
+ - Brute Force with Pruning Algorithm
+ - Backtracking Algorithm
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+These algorithms have been altered to show only how long it takes to execute each algorithm in milliseconds
+The print statements have been factored out to show more accurate computational time taken
 
-## Folder Structure
+NOTE: All source links have been provided in the codes themselves
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).

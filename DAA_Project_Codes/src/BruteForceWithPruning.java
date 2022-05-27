@@ -1,3 +1,5 @@
+//Source: https://introcs.cs.princeton.edu/java/23recursion/Queens2.java.html
+
 class Queens2 {
     static int count = 0;
 
@@ -28,24 +30,25 @@ class Queens2 {
     }
 
     // try all n! permutations, but prune useless ones
-    public static void enumerate(int[] a, boolean[] diag1, boolean[] diag2, int k) {
+    public static void enumerate(int[] a, boolean[] diag1, boolean[] diag2, int k) { //T(n) = T(n - 1) + n
         int n = a.length;
 
         // found one, so print out and stop
         if (k == 0) {
+            count++;
             // printQueens(a);
             // System.exit(0);
         }
 
-        for (int i = 0; i < k; i++) {
-            swap(a, i, k - 1);
+        for (int i = 0; i < k; i++) { //n
+            swap(a, i, k - 1); 
             int j = k - 1;
 
             // if placement of new queen is ok, then enumerate
             if (!diag1[j + a[j]] && !diag2[n + j - a[j]]) {
                 diag1[j + a[j]] = true;
                 diag2[n + j - a[j]] = true;
-                enumerate(a, diag1, diag2, k - 1);
+                enumerate(a, diag1, diag2, k - 1); 
                 diag1[j + a[j]] = false;
                 diag2[n + j - a[j]] = false;
             }
@@ -55,13 +58,14 @@ class Queens2 {
 
     public static void main(String[] args) {
         final long startTime = System.currentTimeMillis();
-        int n = 16;
+        int n = 8;
         int[] a = new int[n]; // a[i] = row of queen in ith column
         boolean[] diag1 = new boolean[2 * n]; // is ith top diagonal occupied?
         boolean[] diag2 = new boolean[2 * n]; // is ith bottom diagonal occupied?
         for (int i = 0; i < n; i++)
             a[i] = i;
         enumerate(a, diag1, diag2, n);
+        System.out.println(count);
         final long endTime = System.currentTimeMillis();
         System.out.println("Total Execution Time: " + (endTime - startTime));
     }

@@ -1,3 +1,5 @@
+//Source: https://www.geeksforgeeks.org/printing-solutions-n-queen-problem/?ref=lbp
+
 
 /* Java program to solve N Queen
 Problem using backtracking */
